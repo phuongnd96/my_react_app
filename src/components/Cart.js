@@ -12,7 +12,7 @@ export const Cart = () => {
             address: address,
             products: products
         };
-        let response = await fetch(`${process.env.REACT_APP_BASE_URL_DEV}/payment`, {
+        let response = await fetch(`${process.env.REACT_APP_BASE_URL_PROD}/payment`, {
             method: 'POST'
             , mode: 'cors'
             , headers: {
