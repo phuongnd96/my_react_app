@@ -10,8 +10,8 @@ export const Card = (props) => {
     let clickHandler = props.clickHandler;
     // 
     return (
-        <div  onClick={clickHandler} style={{ cursor: "pointer" }} className="card-container">
-            <div id="image">
+        <div onClick={clickHandler} style={{ cursor: "pointer" }} className="card-container">
+            <div className="image">
                 <img style={{ width: "200px", height: "200px" }} src={imgPath} />
             </div>
             <div id="label">

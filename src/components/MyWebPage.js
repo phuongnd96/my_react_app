@@ -7,6 +7,7 @@ import { PaginationBar } from './PaginationBar.js';
 import { Modal } from './Modal.js';
 import { BrowserRouter, Route, Link, Switch } from 'react-router-dom';
 import { Cart } from './Cart.js';
+import '../public/MyWebPage.css';
 export function MyWebPage(props) {
     // Control searchbox
     function keyUpHandler(e) {
@@ -64,7 +65,7 @@ export function MyWebPage(props) {
     }, [page, productName, minPrice, maxPrice, productTypeQuery]);
     useEffect(async () => {
         try {
-            let result = await fetch(`${baseUrl}:3000/productType`);
+            let result = await fetch(`${baseUrl}/productType`);
             result.json().then((resJSON) => {
                 changeProductTypesList(productTypesList = resJSON)
             })
@@ -153,10 +154,11 @@ export function MyWebPage(props) {
                     , padding: "40px 40px 40px 40px"
                     , border: "1px solid #dbdbdb"
                     , position: "relative"
+                    , borderRadius: "20px"
                 }} id="header">
                     <div id="searchBox">
                         <div>
-                            <input onKeyUp={keyUpHandler} value={input} onClick={() => {
+                            <input style={{ borderRadius: "20px", marginLeft: "100px" }} onKeyUp={keyUpHandler} value={input} onClick={() => {
                                 if (!toggle) {
                                     changeInput("");
                                 }
@@ -164,9 +166,8 @@ export function MyWebPage(props) {
                             }} onChange={onChange} type="text" ></input>
                         </div>
                     </div>
-
-                    <div>
-                        <span>Max Price</span>
+                    <div style={{ marginLeft: "20px" }}>
+                        <span style={{ marginRight: "20px" }}>Max Price</span>
                         <select onChange={onChangeHandlerMax} id="filter">
                             {([7000000, 10000000, 15000000, 20000000, 25000000, 30000000, 35000000]).map((elem) => {
                                 return (<option value={elem}>{elem / 1000000} triệu</option>)
@@ -174,8 +175,8 @@ export function MyWebPage(props) {
                             <option selected="selected">Chọn giá lớn nhất</option>
                         </select>
                     </div>
-                    <div>
-                        <span>Min Price</span>
+                    <div style={{ marginLeft: "20px" }}>
+                        <span style={{ marginRight: "20px" }}>Min Price</span>
                         <select onChange={onChangeHandlerMin}>
                             {([5000000, 7000000, 10000000, 15000000, 20000000, 25000000]).map((elem) => {
                                 return (<option value={elem}>{elem / 1000000} triệu</option>)
@@ -184,8 +185,8 @@ export function MyWebPage(props) {
                         </select>
                     </div>
                     {/* Filter by type */}
-                    <div>
-                        <span>Loại</span>
+                    <div style={{ marginLeft: "20px" }}>
+                        <span style={{ marginRight: "20px" }}>Loại</span>
                         <select onChange={onChangeHandlerType} id="filter">
                             {
                                 productTypesList.map((productType) => {
