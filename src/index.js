@@ -7,7 +7,7 @@ require('dotenv').config();
 
 ReactDOM.render(
   <BrowserRouter>
-    <MyWebPage baseUrl={process.env.REACT_APP_BASE_URL_PROD} />
+    <MyWebPage baseUrl={process.env.REACT_APP_BASE_URL_DEV} />
   </BrowserRouter>,
   document.getElementById('root')
 );
