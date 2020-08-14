@@ -1,0 +1,16 @@
+.input-wrapper {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.input-wrapper input {
+  border-radius: 15px;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+#submit-btn {
+  border-radius: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}

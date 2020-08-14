@@ -1,0 +1,41 @@
+*{
+    margin:0px;
+    font-size: 12px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.card-container{
+    height: 300px;
+    width: 200px;
+    border: 1px solid #dbdbdb;
+    border-radius: 5px;
+    padding: 10px 10px 10px 10px;
+}
+img{
+    max-width:100%;
+    max-height:100%;
+}
+#price{
+    font-weight: bold;
+     padding-top: 12px;
+     font-size: 14px;
+}
+#old-price{
+    padding-top: 5px;
+    color:#9d9d9d;  
+}
+.underline{
+    text-decoration: underline;
+}
+#discountPercentage{
+    padding-left: 5px;
+    font-size: 12px;
+    font-weight: normal;
+    color:#9d9d9d;
+}
+.fa{
+    color:#fac545;
+    padding-top: 5px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
