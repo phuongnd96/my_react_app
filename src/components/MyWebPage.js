@@ -83,13 +83,18 @@ export function MyWebPage(props) {
     }
     function onChangeHandlerMin(e) {
         console.log(e.target.value);
-        changePage(1);
-        changeMinPrice(e.target.value);
+        if (e.target.value != "Chọn giá nhỏ nhất") {
+            changePage(1);
+            changeMinPrice(e.target.value);
+        }
     }
     function onChangeHandlerMax(e) {
         console.log(e.target.value);
-        changePage(1);
-        changeMaxPrice(e.target.value);
+        if (e.target.value != "Chọn giá lớn nhất") {
+            changePage(1);
+            changeMaxPrice(e.target.value);
+        }
+
     }
     function onChangeHandlerType(e) {
         console.log(e.target.value);
